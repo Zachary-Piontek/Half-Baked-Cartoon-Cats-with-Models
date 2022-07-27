@@ -32,7 +32,7 @@ describe('cats routes', () => {
 
   it('GET /cats should return a list of cats', async () => {
     const resp = await request(app).get('/cats');
-    expect(resp.body.length).toEqual(4);
+    expect(resp.body.length).toEqual(8);
     expect(resp.body[0]).toEqual({
       id: expect.any(String),
       name: expect.any(String),
@@ -45,9 +45,9 @@ describe('cats routes', () => {
       name: 'Felix',
       type: 'Tuxedo',
       url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Felix_the_cat.svg/200px-Felix_the_cat.svg.png',
-      year: 1892,
-      lives: 3,
-      isSidekick: false
+      year: '1892',
+      lives: '3',
+      issidekick: false
     });
     // expect(res.body).toEqual(felix);
   });

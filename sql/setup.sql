@@ -3,16 +3,16 @@
 DROP table if exists cats;
 
 CREATE table cats (
-    id BIGINT GENERATED ALWAYS AS IDENTITY,
+    id BIGINT NOT NULL,
     name VARCHAR NOT NULL,
     type VARCHAR NOT NULL,
     url VARCHAR NOT NULL,
-    year INT,
-    lives INT,
-    isSidekick VARCHAR NOT NULL
+    year BIGINT NOT NULL,
+    lives BIGINT NOT NULL,
+    issidekick BOOLEAN NOT NULL
 );
 
-INSERT into cats (id, name, type, url, year, lives, isSidekick) values
+INSERT into cats (id, name, type, url, year, lives, issidekick) values
   (
      '1',
      'Felix',
